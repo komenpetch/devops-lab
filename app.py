@@ -18,4 +18,4 @@ if __name__ == "__main__":
     test_incomes = [100000, 250000, 400000, 600000, 1000000]
     for income in test_incomes:
         tax = calculate_tax(income)
-        print(format_result(income, tax))
+        print(f"[TAX] Income={income:,} THB => Tax={tax:,.2f} THB")
