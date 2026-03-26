@@ -1,4 +1,6 @@
 # app.py - Simple Tax Calculator
+
+
 def calculate_tax(income):
     if income <= 150000:
         return 0
@@ -11,8 +13,10 @@ def calculate_tax(income):
     else:
         return 65000 + (income - 750000) * 0.20
 
+
 def format_result(income, tax):
     return f"Income: {income:>10,} THB | Tax: {tax:>10,.2f} THB"
+
 
 def calculate_deduction(expense_type, amount):
     """Calculate allowable tax deductions."""
@@ -22,6 +26,7 @@ def calculate_deduction(expense_type, amount):
         "donation": min(amount, 100000),
     }
     return deductions.get(expense_type, 0)
+
 
 if __name__ == "__main__":
     test_incomes = [100000, 250000, 400000, 600000, 1000000]
