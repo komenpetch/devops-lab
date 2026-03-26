@@ -16,8 +16,8 @@ class TestTaxCalculator(unittest.TestCase):
     def test_fifteen_percent_bracket(self):
         self.assertEqual(calculate_tax(600000), 42500)
 
-    def test_twenty_percent_bracket(self):
-        self.assertEqual(calculate_tax(1000000), 115000)
+    def test_twenty_five_percent_bracket(self):
+        self.assertEqual(calculate_tax(3000000), 565000)
 
     def test_negative_income(self):
         # Should this return 0 or raise an error?

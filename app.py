@@ -10,8 +10,10 @@ def calculate_tax(income):
         return 7500 + (income - 300000) * 0.10
     elif income <= 750000:
         return 27500 + (income - 500000) * 0.15
-    else:
+    elif income <= 2000000:                                    # ← new
         return 65000 + (income - 750000) * 0.20
+    else:                                                      # ← new
+        return 315000 + (income - 2000000) * 0.25
 
 
 def format_result(income, tax):
@@ -29,7 +31,7 @@ def calculate_deduction(expense_type, amount):
 
 
 if __name__ == "__main__":
-    test_incomes = [100000, 250000, 400000, 600000, 1000000]
+    test_incomes = [100000, 250000, 400000, 600000, 1000000, 3000000]
     for income in test_incomes:
         tax = calculate_tax(income)
         print(format_result(income, tax))
